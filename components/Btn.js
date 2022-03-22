@@ -1,12 +1,17 @@
 import React, {Component} from "react";
 import {View, Text} from "react-native"
-import {inject} from "mobx-react";
+import {inject, observer} from "mobx-react";
 
 @inject("RootStore")
+@observer
 class Index extends Component {
+    handleChangeName=()=> {
+        this.props.RootStore.changeName("灵梦")
+    }
+
     render() {
         return (
-            <View><Text>Btn:{this.props.RootStore.name}</Text></View>
+            <View><Text onPress={this.handleChangeName}>Btn:{this.props.RootStore.name}</Text></View>
         );
     }
 }
