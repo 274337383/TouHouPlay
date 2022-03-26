@@ -8,6 +8,7 @@ buildscript {
         targetSdkVersion = 30
         ndkVersion = "21.4.7075529"
     }
+
     repositories {
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
